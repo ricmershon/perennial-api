@@ -31,6 +31,15 @@ router.get('/seed', (req, res) => {
     })
 })
 
+router.get('/drop', (req, res) => {
+    Caregiver.remove({}, (err, removedData) => {
+        if (err) {
+            console.log(err);
+        }
+        res.redirect('/perennial-api')
+    })
+})
+
 router.put('/:id', (req, res) => {
   Caregiver.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedCaregiver) => {
     if (err) {
