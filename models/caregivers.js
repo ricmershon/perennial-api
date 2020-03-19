@@ -8,10 +8,6 @@ const careGiverSchema = mongoose.Schema(
         email: { type: String, required: false },
         phone: { type: String, required: false },
         webSite: String,
-        contact: {
-            firstName: String,
-            lastName: String,
-        },
         description: { type: String, required: true },
         takingNewClients: { type: Boolean, default: false },
         services: Array,
