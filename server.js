@@ -26,7 +26,7 @@ mongoose.connection.once('open', () => (
 
 app.use(express.json()); //use .json(), not .urlencoded()
 
-const whitelist = ['http://localhost:3000', 'https://fathomless-sierra-68956.herokuapp.com']
+const whitelist = ['http://localhost:3000', 'https://perennial-portal.herokuapp.com']
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
